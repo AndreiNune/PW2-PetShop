@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string("nome");
             $table->string("sobrenome");
-            $table->string("RG");
-            $table->string("CPF");
             $table->string("email");
             $table->string("telefone");
             $table->timestamps();
