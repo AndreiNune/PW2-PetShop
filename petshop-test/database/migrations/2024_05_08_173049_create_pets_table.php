@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("nome");
             $table->string("especie");
+            $table->string("genero");
             $table->string("raca");
             $table->string("datanasci");
             $table->timestamps();
