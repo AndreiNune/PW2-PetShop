@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("hora");
             $table->string("data");
-            $table->string("observações");
+            $table->string("observacoes");
             $table->timestamps();
         });
     }

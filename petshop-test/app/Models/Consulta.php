@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Consulta extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'hora',
+        'data',
+        'observacoes',
+    ];
 }
