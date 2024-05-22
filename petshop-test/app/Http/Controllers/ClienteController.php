@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cliente;
+
 use Illuminate\Http\Request;
 
 class ClienteController extends Controller
@@ -18,7 +20,7 @@ class ClienteController extends Controller
         $cliente->sobrenome = $req->sobrenome; 
         $cliente->email = $req->email;
         $cliente->telefone = $req->telefone;
-        $contato->save();
+        $cliente->save();
         return redirect()->back();
     }
 
