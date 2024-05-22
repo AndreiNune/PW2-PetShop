@@ -19,7 +19,7 @@
         <img src="{{ asset('imagens/pessoa.png') }}" alt="Shopping Image">
         </div>
         <div class="form">
-            <form method="" action="/adicionar">
+            <form method="POST" action="/adicionar">
                 @csrf
                 <div class="form-header">
                     <div class="title">

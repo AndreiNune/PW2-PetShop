@@ -27,7 +27,7 @@ class PetController extends Controller
 
     public function editar3(Request $req){
         $pet = Pet::find($req->id);
-        return view('editar')->with("pet", $pets);
+        return view('editar')->with("pet", $pet);
     }
 
     public function atualizar3(Request $req){
