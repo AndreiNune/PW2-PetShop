@@ -19,7 +19,8 @@
         <img src="{{ asset('imagens/pessoa.png') }}" alt="Shopping Image">
         </div>
         <div class="form">
-            <form action="#">
+            <form method="" action="/adicionar">
+                @csrf
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastrar Cliente</h1>
@@ -75,8 +76,8 @@
                     </div>
                 </div>
 
-                <div class="continue-button">
-                    <button><a href="#">Continuar</a> </button>
+                <div class="">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </div>
             </form>
         </div>

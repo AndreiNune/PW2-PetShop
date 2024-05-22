@@ -8,13 +8,13 @@ use Illuminate\Http\Request;
 
 class ConsultasController extends Controller
 {
-    public function index(Request $req){
+    public function index2(Request $req){
         $consulta = Consulta::all();
         return view('welcome')->with("consulta", $consulta);
         
     }
 
-    public function adicionar(Request $req){
+    public function adicionar2(Request $req){
         $consulta = new Consulta;
         $consulta->data = $req->data;
         $consulta->hora = $req->hora; 
@@ -23,12 +23,12 @@ class ConsultasController extends Controller
         return redirect()->back();
     }
 
-    public function editar(Request $req){
+    public function editar2(Request $req){
         $consulta = consulta::find($req->id);
         return view('editar')->with("consulta", $consulta);
     }
 
-    public function atualizar(Request $req){
+    public function atualizar2(Request $req){
         $consulta = consulta::find($req->id);
         $consulta->update(
             [
@@ -41,7 +41,7 @@ class ConsultasController extends Controller
         return redirect()->back();
     }
 
-    public function excluir(Request $req){
+    public function excluir2(Request $req){
         $consulta = consulta::find($req->id);
         $consulta->delete();
         return redirect()->back();

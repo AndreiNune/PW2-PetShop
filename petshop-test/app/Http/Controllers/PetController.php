@@ -14,29 +14,31 @@ class PetController extends Controller
         
     }
 
-    public function adicionar(Request $req){
+    public function adicionar3(Request $req){
         $pet = new Pet;
         $pet->nome = $req->nome;
-        $pet->sobrenome = $req->sobrenome; 
-        $pet->email = $req->email;
-        $pet->telefone = $req->telefone;
+        $pet->especie = $req->especie; 
+        $pet->genero = $req->genero;
+        $pet->raca = $req->raca;
+        $pet->datanasci = $req->datanasci;
         $pet->save();
         return redirect()->back();
     }
 
-    public function editar(Request $req){
+    public function editar3(Request $req){
         $pet = Pet::find($req->id);
-        return view('editar')->with("pet", $pet);
+        return view('editar')->with("pet", $pets);
     }
 
-    public function atualizar(Request $req){
+    public function atualizar3(Request $req){
         $pet = Pet::find($req->id);
         $pet->update(
             [
                 "nome" => $req->nome,
-                "sobrenome" => $req->sobrenome,
-                "email" => $req->email,
-                "telefone" => $req->telefone
+                "especie" => $req->especie,
+                "genero" => $req->genero,
+                "raca" => $req->raca,
+                "datanasci" => $req->datanasci,
             ]
 
         );
@@ -44,7 +46,7 @@ class PetController extends Controller
         return redirect()->back();
     }
 
-    public function excluir(Request $req){
+    public function excluir3(Request $req){
         $pet = Pet::find($req->id);
         $pet->delete();
         return redirect()->back();
