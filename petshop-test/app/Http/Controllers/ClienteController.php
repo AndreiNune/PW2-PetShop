@@ -22,10 +22,10 @@ class ClienteController extends Controller
          * $cliente->nome = $req->firstname
          * */
         $cliente = new Cliente;
-        $cliente->nome = $req->firstname;
-        $cliente->sobrenome = $req->lastname; 
+        $cliente->nome = $req->first_name;
+        $cliente->sobrenome = $req->last_name; 
         $cliente->email = $req->email;
-        $cliente->telefone = $req->number;
+        $cliente->telefone = $req->phone;
         $cliente->save();
         return redirect()->back();
     }

@@ -53,13 +53,13 @@ Route::post("/atualizar/{id}", [ClienteController::class, "atualizar"]);
 Route::get("/excluir/{id}", [ClienteController::class, "excluir"]);
 
 Route::get("/", [ConsultasController::class, "index"]);
-Route::post("/adicionar2", [ConsultasController::class, "adicionar2"]);
-Route::get("/editar2/{id}", [ConsultasController::class, "editar2"]);
-Route::post("/atualizar2/{id}", [ConsultasController::class, "atualizar2"]);
-Route::get("/excluir2/{id}", [ConsultasController::class, "excluir2"]);
+Route::post("/adicionar", [ConsultasController::class, "adicionar"]);
+Route::get("/editar/{id}", [ConsultasController::class, "editar"]);
+Route::post("/atualizar/{id}", [ConsultasController::class, "atualizar"]);
+Route::get("/excluir/{id}", [ConsultasController::class, "excluir"]);
 
 Route::get("/", [PetController::class, "index"]);
-Route::post("/adicionar3", [PetController::class, "adicionar3"]);
-Route::get("/editar3/{id}", [PetController::class, "editar3"]);
-Route::post("/atualizar3/{id}", [PetController::class, "atualizar3"]);
-Route::get("/excluir3/{id}", [PetController::class, "excluir3"]);
+Route::post("/adicionar", [PetController::class, "adicionar"]);
+Route::get("/editar/{id}", [PetController::class, "editar"]);
+Route::post("/atualizar/{id}", [PetController::class, "atualizar"]);
+Route::get("/excluir/{id}", [PetController::class, "excluir"]);

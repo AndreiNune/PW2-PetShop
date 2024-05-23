@@ -59,7 +59,7 @@
                             </div>
                             <div class="input-box">
                                 <label for="last_name">Responsável:</label>
-                                <input type="text" id="last_name" name="last_name" placeholder="Ex: Antonio" required>
+                                <input type="text" id="responsible" name="responsible" placeholder="Ex: Antonio" required>
                             </div>
                         </div>
                         <div class="input-group">
