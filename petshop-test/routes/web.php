@@ -19,6 +19,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* 
+    Começo da rota do navbar
+*/
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/welcome.blade.php', function () {
+    return view('welcome');
+});
+
+Route::get('/cadastrarc.blade.php', function () {
+    return view('cadastrarc');
+});
+
+Route::get('/cadastrarp.blade.php', function () {
+    return view('cadastrarp');
+});
+
+Route::get('/aparicao.blade.php', function () {
+    return view('aparicao');
+});
+
+/* 
+    Fim da rota do navbar
+*/
+
 Route::get("/", [ClienteController::class, "index"]);
 Route::post("/adicionar", [ClienteController::class, "adicionar"]);
 Route::get("/editar/{id}", [ClienteController::class, "editar"]);
