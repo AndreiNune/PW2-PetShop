@@ -50,11 +50,34 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nome do Pet</th>
+                            <th scope="col">Genero</th>
+                            <th scope="col">Espécie</th>
+                            <th scope="col">Raça</th>
                             <th scope="col">Responsável</th>
                             <th scope="col">Doença</th>
                         </tr>
                     </thead>
                     <tbody id="pets-table">
+                    @if (count($pet) > 0)
+                    @foreach ($pet as $pets)
+                        <tr>
+                            <th>{{ $pets->id }}</th>
+                            <th>{{ $pets->nome }}</th>
+                            <th>{{ $pets->especie }}</th>
+                            <th>{{ $pets->genero }}</th>
+                            <th>{{ $pets->raca }}</th>
+                            <th>{{ $pets->responsible }}</th>
+                            <th>{{ $pets->doenca }}</th>
+                            <th><a href="/editar3/{{ $pets->id }}" class="btn btn-primary">Editar</a>
+                                <a href="/excluirp/{{ $pets->id }}" class="btn btn-danger">Excluir</a>
+                            </th>
+                        </tr>
+                    @endforeach
+                @else
+                    <tr>
+                        <th>Sem registros!</th>
+                    </tr>
+                @endif
                     </tbody>
                 </table>
             </div>
