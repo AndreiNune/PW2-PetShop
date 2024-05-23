@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
+    /*$req é a variável que guarda tds os valores que vêm da ultima tela em um vetor*/
     public function index(Request $req){
         $cliente = Cliente::all();
         return view('welcome')->with("cliente", $cliente);
@@ -15,11 +16,16 @@ class ClienteController extends Controller
     }
 
     public function adicionar(Request $req){
+        /** 
+         * $(instancia)->(-> puxa uma variável do vetor) = $req-> (nome do input referente ao campo)
+         *
+         * $cliente->nome = $req->firstname
+         * */
         $cliente = new Cliente;
-        $cliente->nome = $req->nome;
-        $cliente->sobrenome = $req->sobrenome; 
+        $cliente->nome = $req->firstname;
+        $cliente->sobrenome = $req->lastname; 
         $cliente->email = $req->email;
-        $cliente->telefone = $req->telefone;
+        $cliente->telefone = $req->number;
         $cliente->save();
         return redirect()->back();
     }
