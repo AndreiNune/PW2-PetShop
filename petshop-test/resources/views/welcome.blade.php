@@ -76,8 +76,8 @@
                     </div>
                 </div>
 
-                <div class="">
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <div class="continue-button">
+                    <button>Continuar</button>
                 </div>
             </form>
         </div>
