@@ -11,7 +11,7 @@ class ClienteController extends Controller
     /*$req é a variável que guarda tds os valores que vêm da ultima tela em um vetor*/
     public function index(Request $req){
         $cliente = Cliente::all();
-        return view('welcome')->with("cliente", $cliente);
+        return view('aparicao')->with("cliente", $cliente);
         
     }
 

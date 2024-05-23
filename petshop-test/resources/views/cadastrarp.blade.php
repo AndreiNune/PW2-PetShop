@@ -25,16 +25,16 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="welcome.blade.php">Home</a>
+                        <a class="nav-link" href="welcome">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cadastrarc.blade.php">Cadastrar Cliente</a>
+                        <a class="nav-link" href="cadastrarc">Cadastrar Cliente</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cadastrarp.blade.php">Cadastrar Pet</a>
+                        <a class="nav-link" href="cadastrarp">Cadastrar Pet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="aparicao.blade.php">Consultar</a>
+                        <a class="nav-link" href="aparicao">Consultar</a>
                     </li>
                 </ul>
             </div>
@@ -51,21 +51,34 @@
                     <div class="form-header">
                         <h1>Cadastrar Pet</h1>
                     </div>
-                    <form>
+                    <form method="POST" action="/adicionarp">
+                        @csrf
                         <div class="input-group">
                             <div class="input-box">
                                 <label for="first_name">Nome do pet:</label>
-                                <input type="text" id="first_name" name="first_name" placeholder="" required>
+                                <input type="text" id="nome" name="nome" placeholder="Ex: Loro" required>
                             </div>
                             <div class="input-box">
-                                <label for="last_name">Responsável:</label>
+                                <label for="responsible">Espécie:</label>
+                                <input type="text" id="espec" name="espec" placeholder="Ex: Pássaro" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="responsible">Genero:</label>
+                                <input type="text" id="genero" name="genero" placeholder="Ex: Masculino" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="responsible">Raça:</label>
+                                <input type="text" id="raca" name="raca" placeholder="Ex: Calopsita" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="responsible">Responsável:</label>
                                 <input type="text" id="responsible" name="responsible" placeholder="Ex: Antonio" required>
                             </div>
                         </div>
                         <div class="input-group">
                             <div class="input-box full-width">
                                 <label for="textarea1" class="form-label">Doença do Pet:</label>
-                                <textarea id="textarea1" name="textarea1" rows="3" placeholder="Descreva a doença" required></textarea>
+                                <textarea id="textarea1" name="doenca" rows="3" placeholder="Descreva a doença" required></textarea>
                             </div>
                         </div>
                         <div class="continue-button">

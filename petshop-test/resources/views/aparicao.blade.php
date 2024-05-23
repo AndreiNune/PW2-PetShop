@@ -42,6 +42,7 @@
             <button class="btn btn-primary mx-2" id="show-clients">Mostrar Clientes</button>
         </div>
         <div class="table-background">
+                        <!-- Aqui serão inseridos os registros de pets -->
             <div class="table-responsive" id="pets-container">
                 <h2 class="mb-3">Pets</h2>
                 <table class="table table-hover table-bordered">
@@ -54,10 +55,10 @@
                         </tr>
                     </thead>
                     <tbody id="pets-table">
-                        <!-- Aqui serão inseridos os registros de pets -->
                     </tbody>
                 </table>
             </div>
+                        <!-- Aqui serão inseridos os registros de clientes -->
             <div class="table-responsive" id="clients-container" style="display: none;">
                 <h2 class="mb-3">Clientes</h2>
                 <table class="table table-hover table-bordered">
@@ -71,7 +72,25 @@
                         </tr>
                     </thead>
                     <tbody id="clients-table">
-                        <!-- Aqui serão inseridos os registros de clientes -->
+                    <!-- count(): Argument #1 ($value) must be of type Countable|array, null given -->
+                    @if (count($cliente) > 0)
+                    @foreach ($cliente as $cli)
+                        <tr>
+                            <th>{{ $cli->id }}</th>
+                            <th>{{ $cli->nome }}</th>
+                            <th>{{ $cli->sobrenome }}</th>
+                            <th>{{ $cli->email }}</th>
+                            <th>{{ $cli->telefone }}</th>
+                            <th><a href="/editar/{{ $cli->id }}" class="btn btn-primary">Editar</a>
+                                <a href="/excluir/{{ $cli->id }}" class="btn btn-danger">Excluir</a>
+                            </th>
+                        </tr>
+                    @endforeach
+                @else
+                    <tr>
+                        <th>Sem registros!</th>
+                    </tr>
+                @endif
                     </tbody>
                 </table>
             </div>

@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string("especie");
             $table->string("genero");
             $table->string("raca");
-            $table->string("datanasci");
+            $table->string("responsavel");
+            $table->string("doenca");
             $table->timestamps();
         });
     }
