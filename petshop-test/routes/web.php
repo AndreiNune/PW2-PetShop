@@ -26,12 +26,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
-Route::get('/cadastrarc.blade.php', function () {
+Route::get('/cadastrarc', function () {
     return view('cadastrarc');
 });
 
-Route::get('/cadastrarp.blade.php', function () {
+Route::get('/cadastrarp', function () {
     return view('cadastrarp');
 });
 
@@ -49,7 +52,8 @@ Route::get("/editar/{id}", [ClienteController::class, "editar"]);
 Route::post("/atualizar/{id}", [ClienteController::class, "atualizar"]);
 Route::get("/excluir/{id}", [ClienteController::class, "excluir"]);
 
-Route::post("/adicionarp", [PetController::class, "adicionar3"]);
-Route::get("/editar3/{id}", [PetController::class, "editar3"]);
-Route::post("/atualizar3/{id}", [PetController::class, "atualizar3"]);
-Route::get("/excluirp/{id}", [PetController::class, "excluir"]);
+Route::post("/aparicao", [PetController::class, "index"]);
+Route::post("/adicionarp", [PetController::class, "adicionarp"]);
+Route::get("/editarp/{id}", [PetController::class, "editarp"]);
+Route::post("/atualizarp/{id}", [PetController::class, "atualizarp"]);
+Route::get("/excluirp/{id}", [PetController::class, "excluirp"]);

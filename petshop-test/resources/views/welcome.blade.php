@@ -21,16 +21,16 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="welcome.blade.php">Home</a>
+                        <a class="nav-link" href="welcome">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cadastrarc.blade.php">Cadastrar Cliente</a>
+                        <a class="nav-link" href="cadastrarc">Cadastrar Cliente</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cadastrarp.blade.php">Cadastrar Pet</a>
+                        <a class="nav-link" href="cadastrarp">Cadastrar Pet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="aparicao.blade.php">Consultar</a>
+                        <a class="nav-link" href="aparicao">Consultar</a>
                     </li>
                 </ul>
             </div>

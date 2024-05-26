@@ -10,16 +10,16 @@ class PetController extends Controller
 {
     public function index(Request $req){
         $pet = Pet::all();
-        return view('welcome')->with("pet", $pet);
+        return view('aparicao')->with("pet", $pet);
         
     }
     /** 
          * $(instancia)->(-> puxa uma variável do vetor) = $req-> (nome do input referente ao campo)
          *
-         * $cliente->nome = $req->firstname
+         * $pet->nome = $req->nome
          * */
 
-    public function adicionar3(Request $req){
+    public function adicionarp(Request $req){
         $pet = new Pet;
         $pet->nome = $req->nome;
         $pet->especie = $req->espec; 
@@ -31,12 +31,12 @@ class PetController extends Controller
         return redirect()->back();
     }
 
-    public function editar3(Request $req){
+    public function editarp(Request $req){
         $pet = Pet::find($req->id);
-        return view('editar3')->with("pet", $pet);
+        return view('editarp')->with("pet", $pet);
     }
 
-    public function atualizar3(Request $req){
+    public function atualizarp(Request $req){
         $pet = Pet::find($req->id);
         $pet->update(
             [
@@ -51,7 +51,7 @@ class PetController extends Controller
         return redirect()->back();
     }
 
-    public function excluir3(Request $req){
+    public function excluirp(Request $req){
         $pet = Pet::find($req->id);
         $pet->delete();
         return redirect()->back();

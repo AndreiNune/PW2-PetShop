@@ -19,16 +19,16 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="welcome.blade.php">Home</a>
+                        <a class="nav-link" href="welcome">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cadastrarc.blade.php">Cadastrar Cliente</a>
+                        <a class="nav-link" href="cadastrarc">Cadastrar Cliente</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cadastrarp.blade.php">Cadastrar Pet</a>
+                        <a class="nav-link" href="cadastrarp">Cadastrar Pet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="aparicao.blade.php">Consultar</a>
+                        <a class="nav-link" href="aparicao">Consultar</a>
                     </li>
                 </ul>
             </div>
@@ -43,7 +43,7 @@
         </div>
         <div class="table-background">
                         <!-- Aqui serão inseridos os registros de pets -->
-            <div class="table-responsive" id="pets-container">
+                <div class="table-responsive" id="pets-container" style="display: none;">
                 <h2 class="mb-3">Pets</h2>
                 <table class="table table-hover table-bordered">
                     <thead>
@@ -68,7 +68,7 @@
                             <th>{{ $pets->raca }}</th>
                             <th>{{ $pets->responsible }}</th>
                             <th>{{ $pets->doenca }}</th>
-                            <th><a href="/editar3/{{ $pets->id }}" class="btn btn-primary">Editar</a>
+                            <th><a href="/editarp/{{ $pets->id }}" class="btn btn-primary">Editar</a>
                                 <a href="/excluirp/{{ $pets->id }}" class="btn btn-danger">Excluir</a>
                             </th>
                         </tr>
