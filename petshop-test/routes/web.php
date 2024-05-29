@@ -46,13 +46,21 @@ Route::get('/aparicao', function () {
     Fim da rota do navbar
 */
 
-Route::get("/aparicao", [ClienteController::class, "index"]);
+/*Route::get("/aparicao", function () {
+    $cliente = app()->make(ClienteController::class)->index();
+    $pet = app()->make(PetController::class)->index();
+
+    return view('aparicao', ['clientes' => $cliente, 'pets' => $pet]);
+});*/ 
+
+
 Route::post("/adicionar", [ClienteController::class, "adicionar"]);
 Route::get("/editar/{id}", [ClienteController::class, "editar"]);
 Route::post("/atualizar/{id}", [ClienteController::class, "atualizar"]);
 Route::get("/excluir/{id}", [ClienteController::class, "excluir"]);
 
-Route::post("/aparicao", [PetController::class, "index"]);
+
+Route::post("aparicao", [PetController::class, "index"]);
 Route::post("/adicionarp", [PetController::class, "adicionarp"]);
 Route::get("/editarp/{id}", [PetController::class, "editarp"]);
 Route::post("/atualizarp/{id}", [PetController::class, "atualizarp"]);
