@@ -43,14 +43,14 @@ class PetController extends Controller
         $pet->update(
             [
                 "nome" => $req->nome,
-                "especie" => $req->especie,
+                "especie" => $req->espec,
                 "genero" => $req->genero,
                 "raca" => $req->raca,
                 "responsible" => $req->responsible,
                 "doenca" => $req->doenca,
             ]
         );
-        return redirect()->back();
+        return redirect('/aparicao');
     }
 
     public function excluirp(Request $req){

@@ -49,40 +49,40 @@
                 </div>
                 <div class="form">
                     <div class="form-header">
-                        <h1>Cadastrar Pet</h1>
+                        <h1>Editar Pet</h1>
                     </div>
-                    <form method="POST" action="/adicionarp">
+                    <form method="POST" action="/atualizarp/{{$pet->id}}">
                         @csrf
                         <div class="input-group">
                             <div class="input-box">
                                 <label for="first_name">Nome do pet:</label>
-                                <input type="text" id="nome" name="nome" placeholder="Ex: Loro" required>
+                                <input type="text" id="nome" name="nome" value="{{$pet->nome}}" placeholder="Ex: Loro" required>
                             </div>
                             <div class="input-box">
                                 <label for="responsible">Espécie:</label>
-                                <input type="text" id="espec" name="espec" placeholder="Ex: Pássaro" required>
+                                <input type="text" id="espec" name="espec" value="{{$pet->especie}}" placeholder="Ex: Pássaro" required>
                             </div>
                             <div class="input-box">
-                                <label for="responsible">Genero:</label>
-                                <input type="text" id="genero" name="genero" placeholder="Ex: Masculino" required>
+                                <label for="responsible">Gênero:</label>
+                                <input type="text" id="genero" name="genero" value="{{$pet->genero}}" placeholder="Ex: Masculino" required>
                             </div>
                             <div class="input-box">
                                 <label for="responsible">Raça:</label>
-                                <input type="text" id="raca" name="raca" placeholder="Ex: Calopsita" required>
+                                <input type="text" id="raca" name="raca" value="{{$pet->raca}}" placeholder="Ex: Calopsita" required>
                             </div>
                             <div class="input-box">
                                 <label for="responsible">Responsável:</label>
-                                <input type="text" id="responsible" name="responsible" placeholder="Ex: Antonio" required>
+                                <input type="text" id="responsible" value="{{$pet->responsavel}}" name="responsible" placeholder="Ex: Antonio" required>
                             </div>
                         </div>
                         <div class="input-group">
                             <div class="input-box full-width">
                                 <label for="textarea1" class="form-label">Doença do Pet:</label>
-                                <textarea id="textarea1" name="doenca" rows="3" placeholder="Descreva a doença" required></textarea>
+                                <textarea id="textarea1" name="doenca" rows="3" value="{{$pet->doenca}}" placeholder="Descreva a doença" required></textarea>
                             </div>
                         </div>
                         <div class="continue-button">
-                            <button type="submit">Cadastrar</button>
+                            <button type="submit">Editar</button>
                         </div>
                     </form>
                 </div>
