@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Casa do Pet - Cliente</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <title>Casa do Pet - Pet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="{{ asset('css/pet.css') }}">
 </head>
 
 <body>
@@ -38,50 +41,56 @@
         </div>
     </nav>
 
-<div class="container-fluid">
-    <div class="containerr">
-        <div class="form-container">
-            <div class="imagem">
-                <img src="{{ asset('imagens/pessoa.png') }}" alt="Minha Imagem">
-            </div>
-            <div class="form">
-                <div class="form-header">
-                    <h1>Cadastrar Cliente</h1>
+    <div class="container-fluid">
+        <div class="containerr">
+            <div class="form-container">
+                <div class="imagem">
+                    <img src="{{ asset('imagens/cao.png') }}" alt="Minha Imagem">
                 </div>
-                <form method="POST" action="/adicionar">
-                    @csrf
-                    <div class="input-group">
-                        <div class="input-box">
-                            <label for="first_name">Nome:</label>
-                            <input type="text" id="first_name" name="first_name" placeholder="Primeiro Nome" required>
-                        </div>
-                        <div class="input-box">
-                            <label for="last_name">Sobrenome:</label>
-                            <input type="text" id="last_name" name="last_name" placeholder="Sobrenome" required>
-                        </div>
+                <div class="form">
+                    <div class="form-header">
+                        <h1>Cadastrar Pet</h1>
                     </div>
-                    <div class="input-group">
-                        <div class="input-box">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="xxx@gmail.com" required>
+                    <form method="POST" action="/adicionarp">
+                        @csrf
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="first_name">Nome do pet:</label>
+                                <input type="text" id="nome" name="nome" placeholder="Ex: Loro" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="responsible">Espécie:</label>
+                                <input type="text" id="espec" name="espec" placeholder="Ex: Pássaro" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="responsible">Genero:</label>
+                                <input type="text" id="genero" name="genero" placeholder="Ex: Masculino" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="responsible">Raça:</label>
+                                <input type="text" id="raca" name="raca" placeholder="Ex: Calopsita" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="responsible">Responsável:</label>
+                                <input type="text" id="responsible" name="responsible" placeholder="Ex: Antonio" required>
+                            </div>
                         </div>
-                        <div class="input-box">
-                            <label for="phone">Celular:</label>
-                            <input type="text" id="phone" name="phone" placeholder="xxxx-xxxx" required>
+                        <div class="input-group">
+                            <div class="input-box full-width">
+                                <label for="textarea1" class="form-label">Doença do Pet:</label>
+                                <textarea id="textarea1" name="doenca" rows="3" placeholder="Descreva a doença" required></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="continue-button">
-                        <button>Cadastrar</a></button>
-                    </div>
-                </form>
+                        <div class="continue-button">
+                            <button type="submit">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<footer class="bg-dark text-white text-center py-3">
+    <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Pet Shop. Todos os direitos reservados.</p>
     </footer>
-
 </body>
 </html>
