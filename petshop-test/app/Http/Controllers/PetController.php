@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pet;
+use App\Models\Cliente;
 
 use Illuminate\Http\Request;
 
@@ -10,7 +11,8 @@ class PetController extends Controller
 {
     public function index(Request $req){
         $pet = Pet::all();
-        return view('aparicao')->with("pet", $pet);
+        $cliente = Cliente::all();
+        return view('aparicao')->with("pet", $pet)->with("cliente", $cliente);
         
     }
     /** 

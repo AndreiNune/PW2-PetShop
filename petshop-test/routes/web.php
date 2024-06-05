@@ -38,9 +38,6 @@ Route::get('/cadastrarp', function () {
     return view('cadastrarp');
 });
 
-Route::get('/aparicao', function () {
-    return view('aparicao');
-});
 
 /* 
     Fim da rota do navbar
@@ -52,7 +49,7 @@ Route::post("/atualizar/{id}", [ClienteController::class, "atualizar"]);
 Route::get("/excluir/{id}", [ClienteController::class, "excluir"]);
 
 
-Route::post("aparicao", [PetController::class, "index"]);
+Route::get("aparicao", [PetController::class, "index"]);
 Route::post("/adicionarp", [PetController::class, "adicionarp"]);
 Route::get("/editarp/{id}", [PetController::class, "editarp"]);
 Route::post("/atualizarp/{id}", [PetController::class, "atualizarp"]);

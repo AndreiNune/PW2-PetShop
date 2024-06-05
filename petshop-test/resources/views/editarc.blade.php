@@ -49,7 +49,7 @@
                     <h1>Cadastrar Cliente</h1>
                 </div>
                 <form method="POST" action="/atualizar">
-                    @csrf
+               @csrf
                     <div class="input-group">
                         <div class="input-box">
                             <label for="first_name">Nome:</label>
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="continue-button">
-                        <button>Cadastrar</a></button>
+                        <button>Atualizar</a></button>
                     </div>
                 </form>
             </div>

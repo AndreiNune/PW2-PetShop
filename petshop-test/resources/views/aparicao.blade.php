@@ -58,8 +58,7 @@
                         </tr>
                     </thead>
                     <tbody id="pets-table">
-                    @if (is_array($pet) > 0)
-                    $pet = count($pet);
+                    @if (count($pet) > 0)
                     @foreach ($pet as $pets)
                         <tr>
                             <th>{{ $pets->id }}</th>
