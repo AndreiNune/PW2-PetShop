@@ -74,7 +74,7 @@
                                 <label for="responsible">Responsável:</label>
                                 <input type="text" id="responsible" value="{{$pet->responsavel}}" name="responsible" placeholder="Ex: Antonio" required>
                             </div>
-                        </div>
+                        </div> 
                         <div class="input-group">
                             <div class="input-box full-width">
                                 <label for="textarea1" class="form-label">Doença do Pet:</label>

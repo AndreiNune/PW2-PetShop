@@ -50,7 +50,7 @@ class PetController extends Controller
                 "doenca" => $req->doenca,
             ]
         );
-        return redirect('/aparicao');
+        return redirect('/aparicao'); 
     }
 
     public function excluirp(Request $req){
