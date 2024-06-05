@@ -46,16 +46,8 @@ Route::get('/aparicao', function () {
     Fim da rota do navbar
 */
 
-/*Route::get("/aparicao", function () {
-    $cliente = app()->make(ClienteController::class)->index();
-    $pet = app()->make(PetController::class)->index();
-
-    return view('aparicao', ['clientes' => $cliente, 'pets' => $pet]);
-});*/ 
-
-
 Route::post("/adicionar", [ClienteController::class, "adicionar"]);
-Route::get("/editar/{id}", [ClienteController::class, "editar"]);
+Route::get("/editarc/{id}", [ClienteController::class, "editarc"]);
 Route::post("/atualizar/{id}", [ClienteController::class, "atualizar"]);
 Route::get("/excluir/{id}", [ClienteController::class, "excluir"]);
 
