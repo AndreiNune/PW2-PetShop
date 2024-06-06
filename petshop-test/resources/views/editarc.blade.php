@@ -48,12 +48,12 @@
                 <div class="form-header">
                     <h1>Cadastrar Cliente</h1>
                 </div>
-                <form method="POST" action="/atualizar">
+                <form method="POST" action="/atualizarc/{{$cliente->id}}">
                @csrf
                     <div class="input-group">
                         <div class="input-box">
                             <label for="first_name">Nome:</label>
-                            <input type="text" id="first_name" name="first_name" placeholder="Primeiro Nome" required>
+                            <input type="text" id="first_name" name="first_name" placeholder="Primeiro Nome" required >
                         </div>
                         <div class="input-box">
                             <label for="last_name">Sobrenome:</label>
