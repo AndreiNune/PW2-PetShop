@@ -53,21 +53,21 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label for="first_name">Nome:</label>
-                            <input type="text" id="first_name" name="first_name" placeholder="Primeiro Nome" required >
+                            <input type="text" id="first_name" name="first_name" value="{{$cliente->nome}}" placeholder="Primeiro Nome" required >
                         </div>
                         <div class="input-box">
                             <label for="last_name">Sobrenome:</label>
-                            <input type="text" id="last_name" name="last_name" placeholder="Sobrenome" required>
+                            <input type="text" id="last_name" name="last_name" value="{{$cliente->sobrenome}}" placeholder="Sobrenome" required>
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-box">
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="xxx@gmail.com" required>
+                            <input type="email" id="email" name="email" value="{{$cliente->email}}" placeholder="xxx@gmail.com" required>
                         </div>
                         <div class="input-box">
                             <label for="phone">Celular:</label>
-                            <input type="text" id="phone" name="phone" placeholder="xxxx-xxxx" required>
+                            <input type="text" id="phone" name="phone" value="{{$cliente->telefone}}" placeholder="xxxx-xxxx" required>
                         </div>
                     </div>
                     <div class="continue-button">
