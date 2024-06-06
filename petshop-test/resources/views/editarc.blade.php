@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="continue-button">
-                        <button>Atualizar</a></button>
+                        <button type="submit">Editar</button>
                     </div>
                 </form>
             </div>
