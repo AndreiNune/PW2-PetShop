@@ -50,7 +50,9 @@ class PetController extends Controller
                 "doenca" => $req->doenca,
             ]
         );
-        return redirect('/aparicao'); 
+        $pet = Pet::all();
+        $cliente = Cliente::all();
+        return redirect('aparicao')->with("pet", $pet) ->with("cliente", $cliente);
     }
 
     public function excluirp(Request $req){

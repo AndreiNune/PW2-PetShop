@@ -72,13 +72,13 @@
                             </div>
                             <div class="input-box">
                                 <label for="responsible">Responsável:</label>
-                                <input type="text" id="responsible" value="{{$pet->responsavel}}" name="responsible" placeholder="Ex: Antonio" required>
+                                <input type="hidden" id="responsible" name="responsible" placeholder="Ex: Antonio" required>
                             </div>
                         </div> 
                         <div class="input-group">
                             <div class="input-box full-width">
                                 <label for="textarea1" class="form-label">Doença do Pet:</label>
-                                <textarea id="textarea1" name="doenca" rows="3" value="{{$pet->doenca}}" placeholder="Descreva a doença" required></textarea>
+                                <textarea id="textarea1" name="doenca" rows="3" placeholder="Descreva a doença" required>{{$pet->doenca}}</textarea>
                             </div>
                         </div>
                         <div class="continue-button">

@@ -45,7 +45,7 @@ Route::get('/cadastrarp', function () {
 
 Route::post("/adicionar", [ClienteController::class, "adicionar"]);
 Route::get("/editarc/{id}", [ClienteController::class, "editarc"]);
-Route::post("/atualizar/{id}", [ClienteController::class, "atualizar"]);
+Route::post("/atualizarc/{id}", [ClienteController::class, "atualizarc"]);
 Route::get("/excluir/{id}", [ClienteController::class, "excluir"]);
 
 

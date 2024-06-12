@@ -11,7 +11,7 @@ class ClienteController extends Controller
     /*$req é a variável que guarda tds os valores que vêm da ultima tela em um vetor*/
     public function index(Request $req){
         $cliente = Cliente::all();
-        return view('aparicao')->with("cliente", $cliente);
+        return redirect('aparicao')->with("cliente", $cliente);
         
     }
 
@@ -30,24 +30,24 @@ class ClienteController extends Controller
         return redirect()->back();
     }
 
-    public function editar(Request $req){
+    public function editarc(Request $req){
         $cliente = Cliente::find($req->id);
-        return view('editar')->with("cliente", $cliente);
+        return view('editarc')->with("cliente", $cliente);
     }
 
-    public function atualizar(Request $req){
+    public function atualizarc(Request $req){
         $cliente = Cliente::find($req->id);
         $cliente->update(
             [
-                "nome" => $req->nome,
-                "sobrenome" => $req->sobrenome,
+                "nome" => $req->first_name,
+                "sobrenome" => $req->last_name,
                 "email" => $req->email,
-                "telefone" => $req->telefone
+                "telefone" => $req->phone
             ]
 
         );
-
-        return redirect()->back();
+        $cliente = Cliente::all();
+        return redirect('aparicao')->with("cliente", $cliente);
     }
 
     public function excluir(Request $req){

@@ -53,8 +53,8 @@
                             <th scope="col">Genero</th>
                             <th scope="col">Espécie</th>
                             <th scope="col">Raça</th>
-                            <th scope="col">Responsável</th>
                             <th scope="col">Doença</th>
+                            <th scope="col">Editar/Excluir</th>
                         </tr>
                     </thead>
                     <tbody id="pets-table">
@@ -66,11 +66,12 @@
                             <th>{{ $pets->especie }}</th>
                             <th>{{ $pets->genero }}</th>
                             <th>{{ $pets->raca }}</th>
-                            <th>{{ $pets->responsible }}</th>
                             <th>{{ $pets->doenca }}</th>
-                            <th><a href="/editarp/{{ $pets->id }}" class="btn btn-primary">Editar</a>
+                            <th>
+                                <a href="/editarp/{{ $pets->id }}" class="btn btn-primary">Editar</a>
                                 <a href="/excluirp/{{ $pets->id }}" class="btn btn-danger">Excluir</a>
-                            </th>
+                        </th>
+                            
                         </tr>
                     @endforeach
                 @else
@@ -92,6 +93,7 @@
                             <th scope="col">Sobrenome</th>
                             <th scope="col">Email</th>
                             <th scope="col">Celular</th>
+                            <th scope="col">Editar/Excluir</th>
                         </tr>
                     </thead>
                     <tbody id="clients-table">
@@ -104,7 +106,7 @@
                             <th>{{ $cli->sobrenome }}</th>
                             <th>{{ $cli->email }}</th>
                             <th>{{ $cli->telefone }}</th>
-                            <th><a href="/editar/{{ $cli->id }}" class="btn btn-primary">Editar</a>
+                            <th><a href="/editarc/{{ $cli->id }}" class="btn btn-primary">Editar</a>
                                 <a href="/excluir/{{ $cli->id }}" class="btn btn-danger">Excluir</a>
                             </th>
                         </tr>
